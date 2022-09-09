@@ -1,0 +1,72 @@
+@import '../style/_variables';
+
+.center-by-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerbar-container{
+    @extend .center-by-flex;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: $primarytext;
+    background-color: $primary;
+    a{
+        width: 140px;
+        border-radius: 5px;
+        margin: 0px 20px;
+        height: 35px;
+        border: 1px solid $primarytext;
+        color: $primarytext;
+        text-decoration: none;
+        font-size: 17px;
+        cursor: pointer;
+        @extend .center-by-flex;
+        
+    }
+}
+
+.header-logoidentifier{
+    width: 100%;
+    background-color: white;
+    padding: 15px 0px;
+    @extend .center-by-flex;
+    :nth-child(1){
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            color: $primary;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 15px 10px;
+            transition: 0.2s;
+            
+        }
+        span:hover{
+            cursor: pointer;
+            background-color: $body-hover;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        img{
+            width: 70px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .headerbar-container{
+        flex-direction: column;
+        padding: 10px 0px;
+        height: auto;
+        text-align: center;
+        a{
+            margin: 10px 0px;
+        }
+    }
+}

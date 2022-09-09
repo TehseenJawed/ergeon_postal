@@ -1,0 +1,26 @@
+.postal-wrapper {
+    @extend .center-by-flex;
+    flex-direction: column;
+    span{
+        font-size: 30px;
+        font-weight: 600;
+        margin: 25px 0px;
+    }
+    .postal-code{
+        width: 60%;
+        input[type=number] {
+            width: 100%;
+            font-size: 23px;
+            border: 1px solid $body-hover;
+            padding: 10px 5px;
+            border-radius: 10px;
+            color: gray;
+            transition: 0.3s;
+            outline: none !important;
+        }
+        input[type=number]:focus{
+            border: 5px solid $body-hover;
+            transition: 0.3s;
+        }
+    }
+}
